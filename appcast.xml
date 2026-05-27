@@ -33,6 +33,7 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
                        length="59755760"
                        type="application/octet-stream" />
         </item>
+        <item>
             <title>Version 1.1.2</title>
             <pubDate>Wed, 27 May 2026 07:00:00 +0000</pubDate>
             <description><![CDATA[
@@ -61,7 +62,7 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
                        length="59755623"
                        type="application/octet-stream" />
         </item>
-                <item>
+        <item>
             <title>Version 1.1.1</title>
             <pubDate>Wed, 27 May 2026 06:02:32 +0000</pubDate>
             <description><![CDATA[
@@ -97,5 +98,5 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
                        length="53458622"
                        type="application/octet-stream" />
         </item>
-       </channel>
-   </rss>
+    </channel>
+</rss>
