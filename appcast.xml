@@ -5,6 +5,86 @@
         <description>Most recent updates to BreakMate.</description>
         <language>en</language>
         <item>
+            <title>Version 1.2.0</title>
+            <pubDate>Sun, 31 May 2026 12:00:00 +0000</pubDate>
+            <description><![CDATA[
+                <h3>BreakMate v1.2.0 — Contextual Intelligence & Personal Wellness</h3>
+                <p>This update introduces the Contextual Wellness Engine, making BreakMate an intelligent partner that understands your work context.</p>
+                <ul>
+                    <li>Contextual Tips: Advice tailored to your active app, like posture checks for coding or eye rest for browsing.</li>
+                    <li>Calendar Sync: Automatically delays breaks if you are in a meeting.</li>
+                    <li>End-of-Day Wind-Down: A daily summary triggered at your clock-out time.</li>
+                    <li>Personal Goals: Set targets for focus, breaks, and movement.</li>
+                    <li>Wellness Library: Easily manage and favorite your preferred exercises.</li>
+                    <li>Companion Progression: Unlock new pets based on regular use, not just streaks.</li>
+                    <li>Privacy Report: Clear details on how your data stays local on your machine.</li>
+                </ul>
+            ]]></description>
+            <enclosure url="https://github.com/bijithintersmart/standup/releases/download/v1.2.0/BreakMate-Installer.dmg"
+                       sparkle:version="30"
+                       sparkle:shortVersionString="1.2.0"
+                       sparkle:edSignature="DYNAMIC_SIGNATURE_WILL_BE_INSERTED_BY_CI"
+                       length="0"
+                       type="application/octet-stream" />
+        </item>
+                <item>
+            <title>Version 1.1.4</title>
+            <pubDate>Sun, 31 May 2026 10:34:42 +0000</pubDate>
+            <description><![CDATA[
+                <h3>BreakMate v1.1.4</h3>
+                <p>## BreakMate v1.1.4 — Onboarding Persistence &amp; Storage Stability
+
+This update addresses a long-standing issue where user onboarding data was not persisting correctly across application restarts. I've overhauled the storage architecture to ensure a more reliable experience on macOS.
+
+### 🛠️ Core Fixes &amp; Enhancements
+
+- **Onboarding Persistence Fix:**
+  - Resolved the "Onboarding Loop" where users were repeatedly prompted to complete onboarding after each app restart.
+  - Implemented a **Dual-Sync** mechanism: Critical flags (onboarding, interval, strict mode) are now mirrored to a separate, high-stability Key-Value store. If the main settings snapshot is ever stale or fails to load, the app automatically recovers state from this mirror.
+
+- **Storage Architecture Overhaul (macOS):**
+  - **Path Relocation:** Moved the internal database from `~/Documents/breakmate_db` to `~/Library/Application Support/breakmate_db`. This aligns with macOS best practices and prevents data loss from manual user file management.
+  - **Automatic Migration:** Added logic to detect legacy databases in the Documents folder and seamlessly move them to the new Application Support location on the first run of v1.1.4.
+  - **Lock File Self-Healing:** Implemented automatic cleanup of stale `lock.mdb` files. This prevents the app from failing to start if a previous instance crashed or didn't release the database lock properly.
+
+- **Resilient Data Loading:**
+  - Added robust `try-catch` blocks to the `SettingsRepository` load sequence.
+  - Enhanced JSON decoding for complex fields (Exercises, Activity Patterns) to handle nulls or malformed strings without crashing the entire settings load.
+  - Added explicit debug logging across the storage lifecycle for better traceability.
+
+- **Developer Experience:**
+  - Fixed a compilation error regarding `unawaited` futures by properly importing `dart:async`.
+  - Incremented build version to `29` for Sparkle update compatibility.
+
+### 📄 Documentation Updates
+- Updated `README.md` with a new **Storage &amp; Persistence Architecture** section.
+- Added project credits: "Built with Flutter by Bijith P N".
+
+### 📦 Version Information
+- **Version:** 1.1.4
+- **Build:** 29
+- **Release Date:** May 31, 2026
+
+### Installation Note (macOS)
+
+Since BreakMate is not notarized by Apple, macOS may show a security warning on first launch.
+
+1. Double-click the `BreakMate-Installer.dmg` and drag BreakMate to your Applications folder.
+2. Right-click (or Control-click) the BreakMate app and select Open.
+3. If it still blocks, go to **System Settings &gt; Privacy &amp; Security** and click **Allow Anyway** next to BreakMate.</p>
+                <h4>Installation Note (macOS)</h4>
+                <p>Since BreakMate is not notarized by Apple, macOS may show a security
+                warning on first launch. Open System Settings &gt; Privacy and Security
+                and click Allow Anyway next to BreakMate.</p>
+            ]]></description>
+            <enclosure url="https://github.com/bijithintersmart/standup/releases/download/v1.1.4/BreakMate-Installer.dmg"
+                       sparkle:version="29"
+                       sparkle:shortVersionString="1.1.4"
+                       sparkle:edSignature="yScG//d4G0ogreKNcvYSLdm+vlwM9qpZnfKypuDpwIsSN1eoXVjb0GFY+duQNh7Sk+NpzZ/1N5nhrt/3xc9gDQ=="
+                       length="51168208"
+                       type="application/octet-stream" />
+        </item>
+<item>
             <title>Version 1.1.3</title>
             <pubDate>Wed, 27 May 2026 16:30:00 +0000</pubDate>
             <description><![CDATA[
@@ -29,11 +109,10 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
             <enclosure url="https://raw.githubusercontent.com/bijithintersmart/break-mate-update/main/release_dmg/BreakMate-Installer.dmg"
                        sparkle:version="28"
                        sparkle:shortVersionString="1.1.3"
-                       sparkle:edSignature="aTp/JCfKZhr6IavY7f29mosOS6l6Ra3pUzRc0Y5DocdmVWpCM+F9HVF6tkOQyRrHoV+kPH0GSDBfLk8u2S04BQ=="
-                       length="59755760"
+                       sparkle:edSignature="DAsVF1WtMjrVomzvh+QBlcDMJZQKVKoKjzcleDAU8e2fl6wymEkx7AgnX6nlLwnjm2+TipXOIdQBAx7s3qPGAA=="
+                       length="36933255"
                        type="application/octet-stream" />
         </item>
-        <item>
             <title>Version 1.1.2</title>
             <pubDate>Wed, 27 May 2026 07:00:00 +0000</pubDate>
             <description><![CDATA[
@@ -58,11 +137,11 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
             <enclosure url="https://raw.githubusercontent.com/bijithintersmart/break-mate-update/main/release_dmg/BreakMate-Installer.dmg"
                        sparkle:version="27"
                        sparkle:shortVersionString="1.1.2"
-                       sparkle:edSignature="7qn8CCN6b2dc4BERibbXIfTgwaePjq2Vsr2zSDG7zYm6eMSLaWxC/sJ8d/nDZw0egGkAaQdbvcpydE+QwdqnBA=="
-                       length="59755623"
+                       sparkle:edSignature="MpQx+CuWh+TBZ9BIN2XzeLPBwMaAV9IA6baWhGqEii9DCp2L+XdOU5qODrQN4pWJ3JJubeqzYwqKVvXUzm1jAQ=="
+                       length="59755429"
                        type="application/octet-stream" />
         </item>
-        <item>
+                <item>
             <title>Version 1.1.1</title>
             <pubDate>Wed, 27 May 2026 06:02:32 +0000</pubDate>
             <description><![CDATA[
@@ -98,5 +177,94 @@ Since BreakMate is not notarized by Apple, macOS may show a security warning on 
                        length="53458622"
                        type="application/octet-stream" />
         </item>
-    </channel>
-</rss>
+<item>
+            <title>Version 1.1.0</title>
+            <pubDate>Wed, 27 May 2026 05:00:00 +0000</pubDate>
+            <description><![CDATA[
+                <h3>BreakMate v1.1.0 — Performance Refactoring &amp; Pet Fatigue</h3>
+                <p>This update brings major performance improvements under the hood, upgrades to how state is synced across components, and the introduction of the new Pet Fatigue AI behavioral model.</p>
+
+                <h4>AI Pet Fatigue (Phase 3.1)</h4>
+                <ul>
+                    <li>Your companion pet now dynamically shows tired behavior as your day goes on. The behavioral decision engine tracks your cumulative work hours throughout the day.</li>
+                    <li>If you have worked for 3 hours or more, the pet is much more likely to sleep or rest, while high-energy animations like running or jumping are naturally discouraged so the pet stays calm.</li>
+                </ul>
+
+                <h4>Isolate Exception Fix &amp; Better Stability</h4>
+                <ul>
+                    <li>Resolved the services library crash that was occurring in background isolate communication.</li>
+                    <li>Implemented a proxy method channel pattern so that background polling operations for idle status and smart app detection run reliably on separate Dart threads without causing UI micro-stutters or engine crashes.</li>
+                </ul>
+
+                <h4>Isolate State Synchronization</h4>
+                <ul>
+                    <li>Synced target end times and daily work totals across the main app and overlay components, making sure the companion desktop panel is always aligned with the main app status.</li>
+                </ul>
+
+                <h4>Core Code Refactoring (Phase 2.1)</h4>
+                <ul>
+                    <li>Simplified the large monolithic TimerEngine class by breaking it down into smaller, focused modules: TimerStateData (state properties), TimerRepository (persistence), and TimerContextManager (focus mode and meeting detection).</li>
+                </ul>
+
+                <h4>Performance Optimization</h4>
+                <ul>
+                    <li>Added aggressive memory cleanup by clearing pet theme image caches when switching pet selections.</li>
+                    <li>Wrapped fast-ticking timer elements in RepaintBoundary widgets to avoid redrawing the entire companion overlay window unnecessarily.</li>
+                </ul>
+
+                <h4>Installation Note (macOS)</h4>
+                <p>Since BreakMate is built independently and is not verified by Apple, macOS will show a security warning when you attempt to launch it for the first time.</p>
+                <ol>
+                    <li>Double-click the BreakMate-Installer.dmg file and drag BreakMate to your Applications folder.</li>
+                    <li>Open your Applications folder, right-click (or Control-click) the BreakMate app, and select Open.</li>
+                    <li>If it still blocks launch, go to <b>System Settings &gt; Privacy &amp; Security</b>, scroll down to the Security section, and click <b>Allow Anyway</b> next to the BreakMate notice to authorize it.</li>
+                </ol>
+            ]]></description>
+            <enclosure url="https://github.com/bijithintersmart/standup/releases/download/v1.1.0/BreakMate-Installer.dmg"
+                       sparkle:version="25"
+                       sparkle:shortVersionString="1.1.0"
+                       sparkle:edSignature="DYNAMIC_SIGNATURE_WILL_BE_INSERTED_BY_CI"
+                       length="0"
+                       type="application/octet-stream" />
+        </item>
+        <item>
+            <title>Version 1.0.1</title>
+            <pubDate>Tue, 26 May 2026 18:00:00 +0000</pubDate>
+            <description><![CDATA[
+                <h3>⚡️ Version 1.0.1 — Performance & Stability Update</h3>
+                <ul>
+                    <li>🚀 <b>Instant Launch:</b> Parallel service initialization and shared Flutter engines make the app 10x faster.</li>
+                    <li>🛠 <b>Reliable Updates:</b> Fixed Sparkle update issues in macOS Sandboxed release builds.</li>
+                    <li>👀 <b>20-20-20 Rule:</b> Standardized default break pattern for better eye health.</li>
+                    <li>📈 <b>Fluid Stats:</b> Optimized statistics heatmap for zero-lag scrolling and viewing.</li>
+                    <li>🔔 <b>Better Focus:</b> Reminders no longer steal focus or interrupt your active application.</li>
+                </ul>
+                <p>Update now for a smoother, faster BreakMate experience!</p>
+            ]]></description>
+            <enclosure url="https://github.com/bijithintersmart/standup/releases/download/v1.0.1/BreakMate-Installer.dmg"
+                       sparkle:version="24"
+                       sparkle:shortVersionString="1.0.1"
+                       sparkle:edSignature="DYNAMIC_SIGNATURE_WILL_BE_INSERTED_BY_CI"
+                       length="0"
+                       type="application/octet-stream" />
+        </item>
+ <item>
+                <title>Version 1.0.0</title>
+                <pubDate>Tue, 26 May 2026 12:00:00 +0000</pubDate>
+               <description><![CDATA[
+                   <h3>🚀 What's New in Version 1.0.0</h3>
+                   <ul>
+                       <li>✨ <b>Menu Bar Companion:</b> Seamlessly runs in your macOS menu bar to remind you of healthy work habits.</li>
+                       <li>🐱 <b>Desktop Pets:</b> Interact with animated cats, dogs, and pixel pets while you work.</li>
+                       <li>🎵 <b>Lofi Beats:</b> Built-in lofi music player to help you stay focused during work sessions.</li>
+                       <li>📊 <b>Analytics & Stats:</b> Detailed charts to track your productivity and break trends over time.</li>
+                       <li>🛑 <b>Smart Detection:</b> Automatically detects meetings and respects your Focus Mode settings.</li><li>⚡️ <b>Hardened Runtime:</b> Optimized for macOS performance with full securitysandboxing.</li></ul><p>Enjoying BreakMate? Follow us on GitHub for more updates!</p>]]></description>
+               <enclosure url="https://github.com/bijithintersmart/standup/releases/download/v1.0.0/BreakMate-Installer.dmg"
+                          sparkle:version="1"
+                          sparkle:shortVersionString="1.0.0"
+                          sparkle:edSignature="DYNAMIC_SIGNATURE_WILL_BE_INSERTED_BY_CI"
+                          length="0"
+                          type="application/octet-stream" />
+           </item>
+       </channel>
+   </rss>
